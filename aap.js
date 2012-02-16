@@ -5,8 +5,11 @@ var aap = {};
 
 /**
  * @param {Object} global_namespace, the WIndow object
+ * @param {jQuery} $
  */
-aap.core  = (function (global_namespace) {
+aap.core  = (function (global_namespace, $) {
+	'use strict';
+
 	return {
 		/**
 		 * Get the global namespace
@@ -25,7 +28,7 @@ aap.core  = (function (global_namespace) {
 			var object_names = namespace.split('.'),
 				target = global_namespace;
 
-			jQuery.each(object_names, function (index, object_name) {
+			$.each(object_names, function (index, object_name) {
 				if (aap.utils.isUndefined(target[object_name]) === true) {
 					target[object_name] = {};
 				}
@@ -34,4 +37,4 @@ aap.core  = (function (global_namespace) {
 			});
 		}
 	};
-}(this));
+}(this, jQuery));

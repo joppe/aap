@@ -6,6 +6,8 @@ aap.utils = {
 	 * @return {Boolean}
 	 */
 	isUndefined: function (variable) {
+		'use strict';
+
 		if (typeof variable === 'undefined') {
 			return true;
 		} else {
@@ -19,6 +21,8 @@ aap.utils = {
 	 * @return {String/Number/Object/Array}
 	 */
 	defaultValue: function (supplied_value, default_value) {
+		'use strict';
+
 		var value = supplied_value;
 		
 		if (aap.utils.isUndefined(supplied_value) === true) {
@@ -35,6 +39,8 @@ aap.utils = {
      * @param {Number} max
      */
     getRandomNumber: function (min, max) {
+		'use strict';
+
         var range = max - min,
             random_number = min + Math.round(range * Math.random());
 
@@ -42,6 +48,8 @@ aap.utils = {
     }
 };
 aap.utils.createUniqueId = (function () {
+	'use strict';
+
 	var unique_ids = {},
 		format = '8-4-4-4-12'.split('-');
 	/**
@@ -65,13 +73,13 @@ aap.utils.createUniqueId = (function () {
 		
 		jQuery.each(format, function (index, value) {
 			var loops = parseInt(value, 10) / 4,
-				index;
+				i;
 			
 			if (unique_id !== '') {
 				unique_id += '-';
 			}
 			
-			for (index = 0; index < loops; index += 1) {
+			for (i = 0; i < loops; i += 1) {
 				unique_id += generateRandomString();
 			}
 		});
