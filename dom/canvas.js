@@ -13,7 +13,17 @@ aap.canvas = (function ($) {
 			},
 
 			getContext: function (type) {
+				if (aap.utils.isUndefined(type) === true) {
+					type = '2d';
+				}
+
 				return $element.get(0).getContext(type);
+			},
+
+			clear: function (context_type) {
+				var context = canvas.getContext(context_type);
+
+				context.clearRect(0, 0, dimesions.width, dimesions.height);
 			}
 		};
 		
