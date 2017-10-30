@@ -1,0 +1,36 @@
+{
+    "name": "aap",
+    "version": "1.0.0",
+    "description": "A collection of TypeScript files",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joppe/aap.git"
+    },
+    "keywords": [
+        "TypeScript"
+    ],
+    "author": {
+        "name": "Joppe Aarts",
+        "email": "joppe@apestaartje.info"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/joppe/aap/issues"
+    },
+    "homepage": "https://github.com/joppe/aap#readme",
+    "devDependencies": {
+        "@types/jasmine": "^2.6.2",
+        "jasmine-core": "^2.8.0",
+        "karma": "^1.7.1",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-jasmine": "^1.1.0",
+        "karma-typescript": "^3.0.8",
+        "tslint": "^5.8.0",
+        "tslint-microsoft-contrib": "^5.0.1",
+        "typescript": "^2.5.3"
+    }
+}
