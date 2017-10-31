@@ -3,7 +3,7 @@ import {IWatchable, watcher} from 'src/observer/watcher';
 /**
  * @type {Property}
  */
-export type Property = number|string|boolean|number[]|string[]|boolean[];
+export type Property = number|string|boolean;
 
 /**
  * @interface IHash
